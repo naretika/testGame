@@ -9,11 +9,15 @@ public class LearningCurve : MonoBehaviour
     void Start()
     {
         Character hero = new Character();
-        Debug.LogFormat("hero:{0} - {1} EXP", hero.name, hero.exp);
+        hero.PrintStatsInfo();
 
         Character heroine = new Character("Agatha");
-        Debug.LogFormat("hero:{0} - {1} EXP", heroine.name, heroine.exp);
+        heroine.PrintStatsInfo();
 
+        Weapon weapon = new Weapon("Hounting Bow", 105);
+
+        Character hero2 = hero;
+        hero2.PrintStatsInfo();
     }
 
     // Update is called once per frame
